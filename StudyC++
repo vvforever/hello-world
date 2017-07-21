@@ -1,0 +1,598 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<cmath>
+#include <locale>
+using namespace std;
+inline void keep_window_open() { char ch; cin>>ch; }
+
+/*
+void write_sorry() 
+{
+	cout << "Sorry\n";
+}
+
+*/
+
+/*
+// Squares Plus
+int square_plus(int x)
+{
+	int sum = 0;
+	
+	for (int i = 0; i < x; ++i)
+		sum +=x; 
+	
+	return sum;
+}
+*/
+
+
+/*
+int main()
+{	
+	setlocale(LC_ALL, "rus");
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//p214 Task #7
+
+void solutions(double a, double b, double c)
+{
+	if (b * b - 4 * a * c >= 0)
+	{
+		double x1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+		double x2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+		if (x1 != x2)
+		{
+			cout << "x1 = " << x1 << '\n';
+			cout << "x2 = " << x2 << '\n';
+		}
+		else
+		{
+			cout << "x1 = x2 = " << x1 << '\n';
+		}
+	}
+	else 
+	{
+		cout << "No solutions \n";
+	}
+}
+
+int main()
+{
+	double a = 0;
+	double b = 0;
+	double c = 0;
+	cout << "Input a ";
+	cin >> a;
+	cout << "Input b ";
+	cin >> b;
+	cout << "Input c ";
+	cin >> c;
+
+	solutions(a,b,c);
+}
+
+
+
+/*
+//p214 Task #6
+
+double ctof(double c) // Преобразует температуру
+{					  // в градусах Цельсия
+					  // в температуру в градусах по Фаренгейту
+
+	double f = (9.0/5.0) * c + 32;
+	return f;
+}
+
+double ftoc(double f) // Преобразует температуру
+{					  // в градусах по Фаренгейту
+					  // в температуру в градусах Цельсия 
+
+	double c = 5.0/9.0 * ( f - 32);
+	return c;
+}
+
+
+
+int main()
+{
+/*
+	double c = 0;
+	cin >> c;
+	double f = ctof(c);	
+	cout << "Temperature to F = ";
+	cout << f << '\n';			
+*/
+/*
+	double f = 0;
+	cin >> f;
+	double c = ftoc(f);	
+	cout << "Temperature to C = ";
+	cout << c << '\n';			
+	
+*/	
+//}
+
+
+
+
+
+
+/*
+
+//p214 Task #5
+
+
+
+double ktoc(double k) // Преобразует температуру
+{					  // в градусах Кельвина 
+					  // в температуру в градусах Цельсия
+	if (k >= 0){
+		double c = k - 273.15;		
+		return c;					
+	}
+	else{ 
+		cout << "Invalid value\n";
+		return -273.15;
+	}
+}
+
+int main()
+{
+	double k = 0;
+	cin >> k;					
+	double c = ktoc(k);	
+	cout << "Temperature to C = ";
+	cout << c << '\n';			
+
+}
+*/
+
+
+/*
+//p214 Task #4
+
+
+double ctok(double c) // Преобразует температуру
+{					  // в градусах Цельсия
+					  // в температуру в градусах Кельвина
+	if (c >= -273.15){
+		double k = c + 273.15;		//	int k = c + 273.15;
+		return k;					//return int
+	}
+	else{ 
+		cout << "Invalid value\n";
+		return 0;
+	}
+}
+
+int main()
+{
+	double c = 0;
+	cin >> c;					//cin >> d;
+	double k = ctok(c);			//double k = ctok("c");
+	cout << k << '\n';			//Cout << k << '/n';
+
+}
+
+
+*/
+
+
+
+
+/*
+
+//p214 Task #2 #3
+
+
+double ctok(double c) // Преобразует температуру
+{					  // в градусах Цельсия
+					  // в температуру в градусах Кельвина
+
+	double k = c + 273.15;		//	int k = c + 273.15;
+	return k;					//return int
+}
+
+int main()
+{
+	double c = 0;
+	cin >> c;					//cin >> d;
+	
+	if (c >= -273.15){
+		double k = ctok(c);			//double k = ctok("c");
+		cout << k << '\n';			//Cout << k << '/n';
+	}
+	else 
+		cout << "Invalid value\n";
+
+}
+*/
+
+
+
+
+/*
+	try {
+	//	cout << "Success" << "!\n";
+//4
+//		cout << "success" << '\n';
+//5
+/*		int res = 7;
+		vector<int> v(10);
+		v[5] = res;
+		cout << "Success!\n";
+*/
+
+//6
+/*		vector<int> v(10);
+		v[5] = 7;
+		if (v[5] == 7)
+			cout << "Success!\n"; 
+*/
+
+//7
+/*		int cond = 1;
+		if (cond)
+			cout << "Success!\n";
+		else
+			cout << "Fail!\n";
+*/
+
+//8
+/*		bool c = false;
+		if   (!c)
+			cout << "Success!\n";
+		else
+			cout << "Fail!\n";
+*/
+
+//9
+/*		string s = "ape";
+		bool c = false;
+		if (!c)
+			cout << "Success!\n";
+*/
+
+//10, 11, 12
+/*		string s = "ape";
+		if (s!="fool")
+			cout << "Success!\n";
+*/
+
+//13
+/*		vector<char> v(5);
+		for(int i=0; i<v.size(); ++i);
+		cout << "Success!\n";
+*/		
+
+//14
+/*		vector<char> v(5);
+		for(int i=0; i<=v.size(); ++i);
+		cout << "Success!\n";
+*/		
+
+//15
+/*		string s = "Success!\n";
+		for(int i=0; i<9; ++i)
+			cout << s[i];
+*/
+
+//16
+/*		if (true) 
+			cout << "Success!\n";
+		else
+			cout << "Fail!\n";
+*/
+
+//17
+/*		int x = 2000;
+		int c = x;
+		if (c==2000)
+			cout << "Success!\n";
+*/
+
+//18
+/*		string s = "Success!\n";
+		for(int i=0; i<9; ++i)
+			cout << s[i];
+*/
+
+//19
+/*		vector<char> v(5);
+		for(int i=0; i<=v.size(); ++i);
+		cout << "Success!\n";
+*/
+
+//20
+/*
+		int i=0;
+		int j = 9;
+		while (i<10)
+			++i;
+		if (j<i)
+			cout << "Success!\n";
+*/
+
+//21
+/*		double x = 2;
+		double d = 18/(x+2);
+		if (d == 2*x + 0.5)
+			cout << "Success!\n";
+*/	
+
+//22
+/*	string s = "Success!\n";
+	for (int i=0; i<9; ++i)
+		cout << s[i];
+*/
+
+//23
+/*	int i = 0;
+	while (i<10)
+		++i;
+	if (9<i)
+		cout << "Success!\n";
+*/
+
+
+//24
+/*		double x = 4;
+		double d = 17/(x-2);
+		if (d == 2*x + 0.5)
+			cout << "Success!\n";
+*/
+
+//25
+//	cout << "Success!\n";
+
+/*
+		keep_window_open();
+		return 0;
+	}
+	catch (exception& e) {
+		cerr << "Ошибка: " << e.what() << '\n';
+		keep_window_open();
+		return 1;
+	}
+	catch (...) {
+		cerr << "Неизвестное исключение!\n";
+		keep_window_open();
+		return 2;
+	}
+*/
+
+/*
+
+//p169 Task #6
+
+	vector<string> dig(10);
+
+	dig[0] = "zero";
+	dig[1] = "one";
+	dig[2] = "two";
+	dig[3] = "three";
+	dig[4] = "four";
+	dig[5] = "five";
+	dig[6] = "six";
+	dig[7] = "seven";
+	dig[8] = "eight";
+	dig[9] = "nine";
+
+	int dig_input;
+	while (cin>>dig_input)
+		switch (dig_input) {
+		case 0:
+			cout << dig[0] << "\n";
+			break;
+		case 1:
+			cout << dig[1] << "\n";
+			break;
+		case 2:
+			cout << dig[2] << "\n";
+			break;
+		case 3:
+			cout << dig[3] << "\n";
+			break;
+		case 4:
+			cout << dig[4] << "\n";
+			break;
+		case 5:
+			cout << dig[5] << "\n";
+			break;
+		case 6:
+			cout << dig[6] << "\n";
+			break;
+		case 7:
+			cout << dig[7] << "\n";
+			break;
+		case 8:
+			cout << dig[8] << "\n";
+			break;
+		case 9:
+			cout << dig[9] << "\n";
+			break;
+		default:
+			cout << "НЕПОНЯТНО!!! \n";
+			break;
+	}
+*/
+
+
+
+	
+/*
+	for (int i = 0; i < 10; ++i)
+		cout << dig[i] << '\n';
+*/
+
+
+
+/*
+
+//p166 Tasks
+
+	vector<double> values;
+	double value;
+	while (cin>>value)
+		values.push_back(value);
+/*
+	for (int i = 0; i < values.size(); ++i)
+		cout << values[i] << '\n';
+*/
+	
+/*
+	if (abs(values[0] - values[1])< (1.0/100)) 
+		cout << " Числа почти равны \n";
+	else if (values[0] > values[1]){
+		cout << " Maximum = " << values[0] << "\n";
+		cout << " Minimum = " << values[1] << "\n";
+	}
+	else{ 
+		cout << " Maximum = " << values[1] << "\n";
+		cout << " Minimum = " << values[0] << "\n";
+	}		
+
+*/
+
+
+
+/*
+
+	vector<string> words;
+	for (string word; cin >> word; )
+		words.push_back(word);
+	sort(words);
+*/
+
+
+/*
+// vector push_back
+
+	vector<double> v;
+
+	v.push_back(2.7);
+	v.push_back(5.6);
+	v.push_back(7.9);
+
+
+	for (int i = 0; i < v.size(); ++i)
+		cout << v[i] << '\n';
+
+*/
+
+
+/*
+for (int i = 0; i < 26; ++i)
+		cout << i << '\t' <<  square_plus(i) << '\n';
+
+*/
+
+
+
+//write_sorry();
+
+
+/*
+// Squares
+int square(int x)
+{
+	return x*x;
+}
+
+//	for (int i = 0; i < 100; ++i)
+//		cout << i << '\t' <<  square(i) << '\n';
+
+
+
+
+
+
+/*
+	int val1 = 0;
+	int val2 = 0;
+	cout << "INPUT Value1 = ";
+	cin >> val1;
+	cout << "INPUT Value2 = ";
+	cin >> val2;
+	cout << " Value1 = " << val1 << "\n";
+	cout << " Value2 = " << val2 << "\n";
+	if (val1 == val2) 
+		cout << " Value1 = Value2\n";
+	else if (val1 > val2) 
+		cout << " Value1 > Value2\n";
+	else
+		cout << " Value1 < Value2\n";
+*/
+
+
+/*
+	setlocale(LC_ALL, "rus");
+	string previous = " ";
+	string current;
+	while (cin>>current) {
+		if (previous == current)
+			cout << "Повторяющееся слово: " << current << '\n';
+		previous = current;	
+	}
+*/
+
+
+/*
+	setlocale(LC_ALL, "rus");
+	string str;	
+	str = "Прощай, жестокий мир! ";
+	cout << str << '\n';
+*/
+
+
+/*
+	double d = 0;
+	while (cin>>d) {
+		int i = d;
+		char c = i;
+		int i2 = c;
+		cout << " d==" << d
+			 << " i==" << i
+			 << " i2==" << i2
+			 << " char(" << c << ")\n";
+		}
+*/
+
+
+/*
+// Перевод миль в километры
+	
+	cout << "Введите количество миль: \n";
+	double miles = 0.0;
+	double km = 0.0;
+	while (cin >> miles) {
+		km = miles * 1.609;
+		cout << miles << " миль, это " << km << " километров";
+	}
+*/
+
+
+/*
+}
+*/
